@@ -1,8 +1,10 @@
 using UnityEngine;
+using TMPro;
+
 
 public class ScoreDisplay : MonoBehaviour
 {
-   // print player name here
+    public TextMeshProUGUI score;
     void Start()
     {
         
@@ -11,6 +13,6 @@ public class ScoreDisplay : MonoBehaviour
     
     void Update()
     {
-        
+        score.text = SaveData.Instance.PlayerName;
     }
 }

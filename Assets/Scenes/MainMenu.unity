@@ -606,6 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c334d634909eb4592dcbae50e9c6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveData
+  PlayerName: 
 --- !u!4 &456251599
 Transform:
   m_ObjectHideFlags: 0
@@ -1150,6 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbfb0417b1f950479a97e6b9a4b1494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuUIHandler
+  inputField: {fileID: 1377502062}
 --- !u!1 &1377502060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,7 +1164,6 @@ GameObject:
   - component: {fileID: 1377502064}
   - component: {fileID: 1377502063}
   - component: {fileID: 1377502062}
-  - component: {fileID: 1377502065}
   m_Layer: 5
   m_Name: EnterName
   m_TagString: Untagged
@@ -1252,7 +1253,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1377502065}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InputFieldGrabber, Assembly-CSharp
         m_MethodName: GrabFromInputField
         m_Mode: 5
@@ -1341,21 +1342,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377502060}
   m_CullTransparentMesh: 1
---- !u!114 &1377502065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377502060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5899fa00c0c4e5647aed41581897717a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InputFieldGrabber
-  inputText: 
-  reactionGroup: {fileID: 0}
-  reactionTextBox: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
