@@ -517,6 +517,7 @@ GameObject:
   - component: {fileID: 226047483}
   - component: {fileID: 226047482}
   - component: {fileID: 226047481}
+  - component: {fileID: 226047484}
   m_Layer: 5
   m_Name: ExitToMenu
   m_TagString: Untagged
@@ -588,7 +589,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 226047484}
         m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
         m_MethodName: ExitToMenu
         m_Mode: 1
@@ -638,6 +639,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226047479}
   m_CullTransparentMesh: 1
+--- !u!114 &226047484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226047479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbfb0417b1f950479a97e6b9a4b1494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuUIHandler
+  inputField: {fileID: 0}
 --- !u!1 &450625940
 GameObject:
   m_ObjectHideFlags: 0
