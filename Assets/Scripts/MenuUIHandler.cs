@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 public class MenuUIHandler : MonoBehaviour
 {
     public TMP_InputField inputField;
+
+    public void GrabPlayerName()
+    {
+        string playerName;
+        playerName = inputField.text;
+        SaveData.Instance.PlayerName = playerName;
+    }
     public void StartNew()
     {
         SceneManager.LoadScene(1);
@@ -15,11 +22,5 @@ public class MenuUIHandler : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-
-    public void GrabPlayerName()
-    {
-        string playerName;
-        playerName = inputField.text;
-        SaveData.Instance.PlayerName = playerName;
-    }
+       
 }

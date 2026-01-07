@@ -758,6 +758,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632908146}
   m_CullTransparentMesh: 1
+--- !u!1 &670157496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 670157497}
+  - component: {fileID: 670157498}
+  m_Layer: 0
+  m_Name: MenuUIHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &670157497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670157496}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 84.89563, y: -105.74181, z: -31.79403}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 963150286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &670157498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670157496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbfb0417b1f950479a97e6b9a4b1494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuUIHandler
+  inputField: {fileID: 1377502062}
 --- !u!1 &683268007
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,6 +815,7 @@ GameObject:
   - component: {fileID: 683268011}
   - component: {fileID: 683268010}
   - component: {fileID: 683268009}
+  - component: {fileID: 683268012}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -841,7 +887,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 963150287}
+      - m_Target: {fileID: 683268012}
         m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
         m_MethodName: StartNew
         m_Mode: 1
@@ -891,6 +937,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683268007}
   m_CullTransparentMesh: 1
+--- !u!114 &683268012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683268007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbfb0417b1f950479a97e6b9a4b1494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuUIHandler
+  inputField: {fileID: 1377502062}
 --- !u!1 &767345765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,6 +1189,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 670157497}
   - {fileID: 683268008}
   - {fileID: 1377502061}
   m_Father: {fileID: 0}
@@ -1151,7 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbfb0417b1f950479a97e6b9a4b1494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuUIHandler
-  inputField: {fileID: 1377502062}
+  inputField: {fileID: 0}
 --- !u!1 &1377502060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1224,7 @@ GameObject:
   - component: {fileID: 1377502064}
   - component: {fileID: 1377502063}
   - component: {fileID: 1377502062}
+  - component: {fileID: 1377502065}
   m_Layer: 5
   m_Name: EnterName
   m_TagString: Untagged
@@ -1253,10 +1314,10 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputFieldGrabber, Assembly-CSharp
-        m_MethodName: GrabFromInputField
-        m_Mode: 5
+      - m_Target: {fileID: 1377502065}
+        m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+        m_MethodName: GrabPlayerName
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1342,6 +1403,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377502060}
   m_CullTransparentMesh: 1
+--- !u!114 &1377502065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377502060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbfb0417b1f950479a97e6b9a4b1494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuUIHandler
+  inputField: {fileID: 1377502062}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
