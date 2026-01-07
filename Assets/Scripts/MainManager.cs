@@ -48,6 +48,8 @@ public class MainManager : MonoBehaviour
 
     private void Update()
     {
+        HighscoreText.text = $"Highscore: {SaveData.Instance.GetHighscore()}";
+
         if (!m_Started)
         {
             if (Input.GetKeyDown(KeyCode.Space))
